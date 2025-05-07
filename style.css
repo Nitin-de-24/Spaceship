@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #000;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .full-screen {
+    height: 100vh;
+    width: 100%;
+    background: url('assets/stars-bg.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #rocket {
+    width: 150px;
+    transition: transform 2s ease-in;
+  }
+  
+  #launch-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #39ff14;
+    color: #000;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #39ff14;
+    transition: 0.3s;
+  }
+  
+  #launch-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #portfolio {
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #000, #111);
+    animation: fadeIn 2s ease forwards;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .glow-text {
+    font-size: 3rem;
+    color: #39ff14;
+    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+  }
+  
+  .typing-text {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #39ff14;
+    width: 0;
+    animation: typing 4s steps(40) forwards, blink 0.7s step-end infinite;
+  }
+  
+  /* Scroll animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Keyframes */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
